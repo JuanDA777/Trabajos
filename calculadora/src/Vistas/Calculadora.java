@@ -340,6 +340,7 @@ public class Calculadora extends javax.swing.JFrame {
     private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
         int numero2= Integer.parseInt(pantalla.getText());
         pantalla.setText(operaciones.sumar(numero1, numero2));
+        pantalla.setText(operaciones.restar(numero1, numero2));
     }//GEN-LAST:event_botonIgualActionPerformed
 
     private void botonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMasActionPerformed
