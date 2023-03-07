@@ -13,7 +13,8 @@ import controlador.Operaciones;
 public class Calculadora extends javax.swing.JFrame {
     private String numeros="";
     private final Operaciones operaciones;
-    private int numero1;
+    private float numero1;
+    private int operacion;
     
     
     public String Concatenar(String numero){
@@ -69,8 +70,10 @@ public class Calculadora extends javax.swing.JFrame {
         botonMenos = new javax.swing.JButton();
         botonMultiplicacion = new javax.swing.JButton();
         botonDivision = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.BorderLayout());
 
         pantalla.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
         pantalla.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -264,14 +267,33 @@ public class Calculadora extends javax.swing.JFrame {
         botonMultiplicacion.setBackground(new java.awt.Color(255, 153, 51));
         botonMultiplicacion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         botonMultiplicacion.setText("*");
+        botonMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMultiplicacionActionPerformed(evt);
+            }
+        });
         panelOperaciones.add(botonMultiplicacion);
 
         botonDivision.setBackground(new java.awt.Color(255, 153, 51));
         botonDivision.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         botonDivision.setText("/");
+        botonDivision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonDivisionActionPerformed(evt);
+            }
+        });
         panelOperaciones.add(botonDivision);
 
         jPanel1.add(panelOperaciones, java.awt.BorderLayout.LINE_END);
+
+        jButton1.setBackground(new java.awt.Color(255, 153, 0));
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -334,59 +356,70 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     private void botonPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPuntoActionPerformed
-        // TODO add your handling code here:
+        if (!(this.pantalla.getText().contains("."))){
+           this.pantalla.setText(pantalla.getText()+"."); 
+        }
     }//GEN-LAST:event_botonPuntoActionPerformed
 
     private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
-        int numero2= Integer.parseInt(pantalla.getText());
-        pantalla.setText(operaciones.sumar(numero1, numero2));
-        pantalla.setText(operaciones.restar(numero1, numero2));
+        float numero2= Float.parseFloat(pantalla.getText());
+        switch(operacion){
+            case 1 -> {
+                pantalla.setText(operaciones.sumar(numero1, numero2));
+                operacion = 0;
+                break;
+            }
+            case 2 -> {
+                pantalla.setText(operaciones.restar(numero1, numero2));
+                operacion = 0;
+                break;
+            }
+            case 3 -> {
+                pantalla.setText(operaciones.multiplicar(numero1, numero2));
+                operacion = 0;
+                break;
+            }
+            case 4 -> {
+                pantalla.setText(operaciones.dividir(numero1, numero2));
+                operacion = 0;
+                break;
+            }
+                
+        }
+        
+        
     }//GEN-LAST:event_botonIgualActionPerformed
 
     private void botonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMasActionPerformed
-        numero1 = Integer.parseInt(pantalla.getText());
+        numero1 = Float.parseFloat(pantalla.getText());
         pantalla.setText("0");
+        operacion = 1;
     }//GEN-LAST:event_botonMasActionPerformed
 
     private void botonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenosActionPerformed
-        numero1 = Integer.parseInt(pantalla.getText());
+        numero1 = Float.parseFloat(pantalla.getText());
         pantalla.setText("0");
+        operacion = 2;
     }//GEN-LAST:event_botonMenosActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Calculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void botonMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMultiplicacionActionPerformed
+        numero1 = Float.parseFloat(pantalla.getText());
+        pantalla.setText("0");
+        operacion = 3;
+    }//GEN-LAST:event_botonMultiplicacionActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Calculadora().setVisible(true);
-            }
-        });
-    }
+    private void botonDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDivisionActionPerformed
+        numero1 = Float.parseFloat(pantalla.getText());
+        pantalla.setText("0");
+        operacion = 4;
+    }//GEN-LAST:event_botonDivisionActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new MenuPrincipal().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Boton1;
@@ -407,6 +440,7 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonMenos;
     private javax.swing.JButton botonMultiplicacion;
     private javax.swing.JButton botonPunto;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel panelBorrar;
     private javax.swing.JPanel panelNumeros;
