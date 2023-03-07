@@ -5,6 +5,7 @@
 package Vistas;
 
 import controlador.Operaciones;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Calculadora extends javax.swing.JFrame {
     private final Operaciones operaciones;
     private float numero1;
     private int operacion;
+    private String resultado;
     
     
     public String Concatenar(String numero){
@@ -73,7 +75,6 @@ public class Calculadora extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.BorderLayout());
 
         pantalla.setFont(new java.awt.Font("Trebuchet MS", 3, 48)); // NOI18N
         pantalla.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -363,31 +364,35 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgualActionPerformed
         float numero2= Float.parseFloat(pantalla.getText());
+        
         switch(operacion){
             case 1 -> {
                 pantalla.setText(operaciones.sumar(numero1, numero2));
+                resultado = pantalla.getText();
                 operacion = 0;
                 break;
             }
             case 2 -> {
                 pantalla.setText(operaciones.restar(numero1, numero2));
+                resultado = pantalla.getText();
                 operacion = 0;
                 break;
             }
             case 3 -> {
                 pantalla.setText(operaciones.multiplicar(numero1, numero2));
+                resultado = pantalla.getText();
                 operacion = 0;
                 break;
             }
             case 4 -> {
                 pantalla.setText(operaciones.dividir(numero1, numero2));
+                resultado = pantalla.getText();
                 operacion = 0;
                 break;
             }
                 
         }
-        
-        
+        pantalla.setText(operaciones.quitarDecimal(resultado));
     }//GEN-LAST:event_botonIgualActionPerformed
 
     private void botonMasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMasActionPerformed

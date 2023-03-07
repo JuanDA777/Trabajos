@@ -26,14 +26,13 @@ public class Operaciones {
         
         return resultado +"";
     }
-    
-    public String sinPunto(float resultado){
-        String retorno = "";
-        retorno =Float.toString(resultado);
-        if (resultado%1 == 0) {
-            retorno = retorno.substring(0,retorno.length()-2);
-        }
-        return retorno;
+    public String quitarDecimal(String resultado) {
+    if (resultado.endsWith(".0")) {
+        resultado = resultado.substring(0, resultado.length() - 2);
     }
+    return resultado;
+    }
+    
+    
 }
 
