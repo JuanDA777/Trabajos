@@ -55,7 +55,8 @@ public class Logo extends javax.swing.JFrame {
 
         jPanel2.setLayout(new java.awt.BorderLayout());
 
-        jPanel4.setLayout(new java.awt.GridLayout());
+        jPanel4.setBackground(new java.awt.Color(230, 126, 34));
+        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel2.setBackground(new java.awt.Color(230, 126, 34));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -65,12 +66,15 @@ public class Logo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel4, java.awt.BorderLayout.PAGE_START);
 
+        jPanel5.setBackground(new java.awt.Color(230, 126, 34));
         jPanel5.setLayout(new java.awt.GridLayout(0, 3));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Nombre:");
         jPanel5.add(jLabel1);
         jPanel5.add(jTextField1);
+
+        jPanel8.setBackground(new java.awt.Color(230, 126, 34));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -90,6 +94,8 @@ public class Logo extends javax.swing.JFrame {
         jPanel5.add(jLabel5);
         jPanel5.add(jTextField2);
 
+        jPanel6.setBackground(new java.awt.Color(230, 126, 34));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -108,6 +114,8 @@ public class Logo extends javax.swing.JFrame {
         jPanel5.add(jLabel7);
         jPanel5.add(jTextField3);
 
+        jPanel9.setBackground(new java.awt.Color(230, 126, 34));
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -125,7 +133,7 @@ public class Logo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jPanel3.setLayout(new java.awt.GridLayout());
+        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
         jLabel6.setBackground(new java.awt.Color(230, 126, 34));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -135,7 +143,7 @@ public class Logo extends javax.swing.JFrame {
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
-        jPanel7.setLayout(new java.awt.GridLayout());
+        jPanel7.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton3.setText("Guardar");
         jPanel7.add(jButton3);
