@@ -58,7 +58,7 @@ public class Logo extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(230, 126, 34));
         jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel2.setBackground(new java.awt.Color(230, 126, 34));
+        jLabel2.setBackground(new java.awt.Color(255, 204, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Escritorio\\Imagen de WhatsApp 2023-03-07 a las 12.27.41.jpg")); // NOI18N
         jLabel2.setOpaque(true);
@@ -66,7 +66,7 @@ public class Logo extends javax.swing.JFrame {
 
         jPanel2.add(jPanel4, java.awt.BorderLayout.PAGE_START);
 
-        jPanel5.setBackground(new java.awt.Color(230, 126, 34));
+        jPanel5.setBackground(new java.awt.Color(255, 204, 51));
         jPanel5.setLayout(new java.awt.GridLayout(0, 3));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -74,7 +74,7 @@ public class Logo extends javax.swing.JFrame {
         jPanel5.add(jLabel1);
         jPanel5.add(jTextField1);
 
-        jPanel8.setBackground(new java.awt.Color(230, 126, 34));
+        jPanel8.setBackground(new java.awt.Color(255, 204, 0));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -94,7 +94,7 @@ public class Logo extends javax.swing.JFrame {
         jPanel5.add(jLabel5);
         jPanel5.add(jTextField2);
 
-        jPanel6.setBackground(new java.awt.Color(230, 126, 34));
+        jPanel6.setBackground(new java.awt.Color(255, 204, 0));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -114,7 +114,7 @@ public class Logo extends javax.swing.JFrame {
         jPanel5.add(jLabel7);
         jPanel5.add(jTextField3);
 
-        jPanel9.setBackground(new java.awt.Color(230, 126, 34));
+        jPanel9.setBackground(new java.awt.Color(255, 204, 0));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -135,7 +135,7 @@ public class Logo extends javax.swing.JFrame {
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabel6.setBackground(new java.awt.Color(230, 126, 34));
+        jLabel6.setBackground(new java.awt.Color(255, 204, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\Downloads\\Brazzers-logo-removebg-preview (1).png")); // NOI18N
         jLabel6.setOpaque(true);
