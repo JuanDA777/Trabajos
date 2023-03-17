@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  * @author juand
  */
 public class Calculadora extends javax.swing.JFrame {
+    
     private String numeros="";
     private final Operaciones operaciones;
     private float numero1;
