@@ -4,27 +4,32 @@
  */
 package Vistas;
 
+import Controlador.ControladorLogin;
+import DAO.DAOLogin;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author juand
+ * @author sistemas
  */
 public class Login extends javax.swing.JFrame {
-    private static Login Login; 
+
+    private static Login login;
+    private DAOLogin cLogin=ControladorLogin.getControladorLogin();
+    
     /**
      * Creates new form Login
      */
     private Login() {
         initComponents();
-        this.setTitle("LOGIN ;)");
     }
-    
-    public static Login Login(){
-        if(Login==null){
-            Login=new Login();
-        }
-        return Login;
+
+    public static Login getLogin(){
+        if(login==null)
+            login=new Login();
+        
+        return login;
     }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,124 +39,106 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        olvido = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jTextField1 = new javax.swing.JTextField();
+        usuario = new javax.swing.JTextField();
+        contrasenia = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        olvido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        olvido.setText("¿Olvido su contraseña?");
+        olvido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                olvidoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                olvidoMouseExited(evt);
+            }
+        });
+        getContentPane().add(olvido, java.awt.BorderLayout.PAGE_END);
 
-        jPanel2.setLayout(new java.awt.BorderLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(0, 1));
 
-        jPanel3.setLayout(new java.awt.GridLayout());
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Logo");
+        jPanel1.add(jLabel1);
 
-        jPanel4.setLayout(new java.awt.GridLayout(0, 1));
+        jPanel2.setLayout(new java.awt.GridLayout(0, 1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Usuario");
-        jScrollPane1.setViewportView(jTextArea1);
+        usuario.setText("Usuario.....");
+        usuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                usuarioMouseClicked(evt);
+            }
+        });
+        jPanel2.add(usuario);
 
-        jPanel4.add(jScrollPane1);
+        contrasenia.setText("Contraseña....");
+        contrasenia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                contraseniaMouseClicked(evt);
+            }
+        });
+        jPanel2.add(contrasenia);
 
-        jTextField1.setText("Contraseña");
-        jPanel4.add(jTextField1);
-
-        jButton1.setText("Login");
+        jButton1.setText("Iniciar Sesión");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton1);
+        jPanel2.add(jButton1);
 
-        jPanel3.add(jPanel4);
-
-        jPanel2.add(jPanel3, java.awt.BorderLayout.PAGE_END);
-
-        jPanel6.setLayout(new java.awt.GridLayout());
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Foto");
-        jPanel6.add(jLabel3);
-
-        jPanel2.add(jPanel6, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(jPanel2, java.awt.BorderLayout.CENTER);
-
-        jPanel10.setLayout(new java.awt.GridLayout());
-
-        jButton2.setText("¿Olvido su contraseña?");
-        jPanel10.add(jButton2);
-
-        jPanel1.add(jPanel10, java.awt.BorderLayout.PAGE_END);
+        jPanel1.add(jPanel2);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseClicked
+        // TODO add your handling code here:
+        usuario.setText("");
+    }//GEN-LAST:event_usuarioMouseClicked
+
+    private void contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseniaMouseClicked
+        // TODO add your handling code here:
+        contrasenia.setText("");
+    }//GEN-LAST:event_contraseniaMouseClicked
+
+    private void olvidoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_olvidoMouseEntered
+        // TODO add your handling code here:
+        olvido.setForeground(new java.awt.Color(51, 0, 255));
+    }//GEN-LAST:event_olvidoMouseEntered
+
+    private void olvidoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_olvidoMouseExited
+        // TODO add your handling code here:
+        olvido.setForeground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_olvidoMouseExited
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ControladorLogin cLogin=new ControlaorLogin(usuario.getTe)
+        // TODO add your handling code here:
+        
+        if(cLogin.VerificarUsuarios(usuario.getText(), contrasenia.getText()))
+            JOptionPane.showMessageDialog(this, "Usuario correcto", "Información", JOptionPane.OK_OPTION);
+        else
+            JOptionPane.showMessageDialog(this, "Usuario incorrecto", "Información", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField contrasenia;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel olvido;
+    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

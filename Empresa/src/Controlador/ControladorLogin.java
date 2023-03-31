@@ -4,25 +4,56 @@
  */
 package Controlador;
 
+import DAO.DAOLogin;
+
 /**
  *
- * @author juand
+ * @author Daniel Arteaga
  */
-public class ControladorLogin {
-    private String usuario;
-    private String contraseña;
+public class ControladorLogin implements DAOLogin{
 
-    public ControladorLogin(String Usuario, String Contraseña) {
-        if(this.VerificarUsuarios(usuario, contraseña)){
-            this.usuario = Usuario;
-            this.contraseña = Contraseña; 
-        }
+    private static ControladorLogin controladorLogin;
+    private String usuario;
+    private String contrasenia;
+    
+    
+
+    private ControladorLogin() {
         
     }
     
-    public boolean VerificarUsuarios(String Usuario, String Contraseña){
-    boolean estado=false;
-    if((usuario.equals("Juandiego"))&&(contraseña.equals("12345")))
-        estado = true;
-    return estado;
+    public static ControladorLogin getControladorLogin(){
+        if(controladorLogin==null)
+            controladorLogin=new ControladorLogin();
+        
+        return controladorLogin;
+    }
+
+    @Override
+    public boolean VerificarUsuarios(String usuario, String contrasenia) {
+        boolean estado=false;
+        
+        if((usuario.equals("daniel"))&&(contrasenia.equals("12345")))
+            estado=true;
+        
+        return estado;
+    }
+
+    @Override
+    public String getUsuario() {
+        return this.usuario;
+    }
+
+    @Override
+    public boolean CambiarContrasenia(String contrasenia) {
+        boolean estado=true;        
+        this.contrasenia=contrasenia;
+        return estado;
+        
+    }
+    
+    
+    
+    
+    
 }
