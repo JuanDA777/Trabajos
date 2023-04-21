@@ -11,7 +11,6 @@ package clientermi;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-
 import Interface.RMIDAO;
 
 public class ClienteRMI {
