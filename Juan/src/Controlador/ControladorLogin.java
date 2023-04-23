@@ -42,6 +42,12 @@ public class ControladorLogin implements DAOLogin{
         if((usuario.equals("juan"))&&(contrasenia.equals("12345")))
             estado=true;
         
+        else if(usuario.equals("daniel")&&(contrasenia.equals("12345")))
+            estado=true;
+        
+        else if(usuario.equals("jorge")&&(contrasenia.equals("12345")))
+            estado=true;
+        
         return estado;
     }
 
