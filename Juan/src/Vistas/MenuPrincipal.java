@@ -4,6 +4,10 @@
  */
 package Vistas;
 
+import javax.swing.JOptionPane;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import Interface.RMIDAO;
 /**
  *
  * @author juand
@@ -41,10 +45,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jPanel16 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -53,42 +65,74 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel9.setBackground(new java.awt.Color(143, 0, 255));
         jPanel9.setLayout(new java.awt.BorderLayout());
 
-        jPanel10.setBackground(new java.awt.Color(143, 0, 255));
+        jPanel10.setBackground(new java.awt.Color(0, 0, 0));
         jPanel10.setLayout(new java.awt.BorderLayout());
 
-        jPanel11.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel11.setBackground(new java.awt.Color(0, 0, 0));
         jPanel11.setLayout(new java.awt.GridLayout(0, 1, 10, 10));
 
-        jLabel4.setBackground(new java.awt.Color(205, 205, 205));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Dinero.png")); // NOI18N
-        jPanel11.add(jLabel4);
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.setLayout(new java.awt.GridLayout());
+
+        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.add(jPanel8);
 
         jButton4.setBackground(new java.awt.Color(109, 118, 129));
+        jButton4.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Gato Descuentos");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel11.add(jButton4);
+        jPanel6.add(jButton4);
+
+        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.add(jPanel7);
+
+        jPanel11.add(jPanel6);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new java.awt.GridLayout());
+
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jPanel5);
 
         jButton5.setBackground(new java.awt.Color(109, 118, 129));
+        jButton5.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("jButton5");
-        jPanel11.add(jButton5);
+        jPanel1.add(jButton5);
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jPanel4);
+
+        jPanel11.add(jPanel1);
+
+        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.setLayout(new java.awt.GridLayout());
+
+        jPanel17.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.add(jPanel17);
 
         jButton1.setBackground(new java.awt.Color(109, 118, 129));
+        jButton1.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("jButton1");
-        jPanel11.add(jButton1);
+        jPanel15.add(jButton1);
+
+        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.add(jPanel16);
+
+        jPanel11.add(jPanel15);
 
         jPanel10.add(jPanel11, java.awt.BorderLayout.CENTER);
 
@@ -100,13 +144,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel12.setLayout(new java.awt.GridLayout(2, 2));
 
-        jPanel2.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel12.add(jPanel2);
 
-        jPanel3.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel12.add(jPanel3);
 
         jButton6.setBackground(new java.awt.Color(109, 118, 129));
+        jButton6.setFont(new java.awt.Font("Tilt Warp", 1, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Cerrar sesion");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,43 +162,68 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel12.add(jButton6);
 
         jButton7.setBackground(new java.awt.Color(109, 118, 129));
-        jButton7.setText("¿Que es esto?");
+        jButton7.setFont(new java.awt.Font("Tilt Warp", 1, 18)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Conoce más");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel12.add(jButton7);
 
         jPanel9.add(jPanel12, java.awt.BorderLayout.PAGE_END);
 
-        jPanel14.setBackground(new java.awt.Color(205, 205, 205));
-        jPanel14.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel14.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.setLayout(new java.awt.GridLayout(0, 1));
 
         jLabel3.setBackground(new java.awt.Color(205, 205, 205));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\cooltext434214005938610.png")); // NOI18N
         jPanel14.add(jLabel3);
 
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Dinero.png")); // NOI18N
+        jPanel14.add(jLabel4);
+
         jPanel9.add(jPanel14, java.awt.BorderLayout.PAGE_START);
 
         getContentPane().add(jPanel9, java.awt.BorderLayout.CENTER);
-
-        jMenu3.setText("File");
-        jMenuBar2.add(jMenu3);
-
-        jMenu4.setText("Edit");
-        jMenuBar2.add(jMenu4);
-
-        setJMenuBar(jMenuBar2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Login login = Login.getLogin();
+             login.setVisible(true);
+        
         MenuPrincipal menu = MenuPrincipal.getMenuPrincipal();
         menu.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Descuentos descuentos = Descuentos.getDescuentos();
-        descuentos.setVisible(true);
+        try{
+            Registry registro=LocateRegistry.getRegistry("127.0.0.1",7777);
+            RMIDAO interfaz = (RMIDAO) registro.lookup("RemotoRMI");
+            
+            Descuentos descuentos = Descuentos.getDescuentos();
+            descuentos.setVisible(true);
+        
+            MenuPrincipal menu = MenuPrincipal.getMenuPrincipal();
+            menu.setVisible(false);
+            
+        }catch(Exception e){
+            System.out.println(""+e);
+            JOptionPane.showMessageDialog(null,"Actualmente servidor no esta activo");
+            
+        }
+        
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        JOptionPane.showMessageDialog(null, "Este es el menu principal para acceder usamos un sinlgeton");
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -163,16 +234,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 }

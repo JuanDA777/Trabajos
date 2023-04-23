@@ -8,6 +8,7 @@ package Vistas;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import Interface.RMIDAO;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -60,7 +61,8 @@ public class Descuentos extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
-        total = new javax.swing.JTextField();
+        jPanel27 = new javax.swing.JPanel();
+        total = new javax.swing.JLabel();
         jPanel23 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
@@ -68,6 +70,8 @@ public class Descuentos extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel25 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -127,7 +131,7 @@ public class Descuentos extends javax.swing.JFrame {
         jPanel5.add(jLabel13);
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel7.setLayout(new java.awt.GridLayout());
+        jPanel7.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel18.setBackground(new java.awt.Color(0, 0, 0));
         jPanel18.setLayout(new java.awt.GridLayout(0, 1));
@@ -154,11 +158,11 @@ public class Descuentos extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tilt Warp", 0, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Valor Pagar");
+        jLabel14.setText("Valor Pagar $");
         jPanel5.add(jLabel14);
 
         jPanel15.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel15.setLayout(new java.awt.GridLayout());
+        jPanel15.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel21.setBackground(new java.awt.Color(0, 0, 0));
         jPanel21.setLayout(new java.awt.GridLayout(0, 1));
@@ -166,8 +170,12 @@ public class Descuentos extends javax.swing.JFrame {
         jPanel22.setBackground(new java.awt.Color(0, 0, 0));
         jPanel21.add(jPanel22);
 
+        jPanel27.setLayout(new java.awt.GridLayout());
+
         total.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jPanel21.add(total);
+        jPanel27.add(total);
+
+        jPanel21.add(jPanel27);
 
         jPanel23.setBackground(new java.awt.Color(0, 0, 0));
         jPanel21.add(jPanel23);
@@ -182,7 +190,7 @@ public class Descuentos extends javax.swing.JFrame {
         jPanel1.add(jPanel5, java.awt.BorderLayout.CENTER);
 
         jPanel14.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel14.setLayout(new java.awt.GridLayout());
+        jPanel14.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel24.setBackground(new java.awt.Color(0, 0, 0));
         jPanel14.add(jPanel24);
@@ -210,6 +218,22 @@ public class Descuentos extends javax.swing.JFrame {
         jPanel14.add(jButton2);
 
         jPanel25.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel25.setLayout(new java.awt.GridLayout());
+
+        jPanel26.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel25.add(jPanel26);
+
+        jButton3.setBackground(new java.awt.Color(255, 0, 0));
+        jButton3.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Conoce más");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel25.add(jButton3);
+
         jPanel14.add(jPanel25);
 
         jPanel1.add(jPanel14, java.awt.BorderLayout.PAGE_END);
@@ -217,7 +241,7 @@ public class Descuentos extends javax.swing.JFrame {
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.add(jPanel4);
@@ -244,14 +268,19 @@ public class Descuentos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        MenuPrincipal menu = MenuPrincipal.getMenuPrincipal();
+        menu.setVisible(true);
+        
         Descuentos descuentos = Descuentos.getDescuentos();
         descuentos.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        boolean serverActivo;
         try{
             Registry registro=LocateRegistry.getRegistry("127.0.0.1",7777);
             RMIDAO interfaz = (RMIDAO) registro.lookup("RemotoRMI");
+            
             
             float descuento;
             descuento = interfaz.descuentos(Float.parseFloat(numero1.getText()), Float.parseFloat(numero2.getText()));
@@ -259,14 +288,25 @@ public class Descuentos extends javax.swing.JFrame {
             
         }catch(Exception e){
             System.out.println(""+e);
+            JOptionPane.showMessageDialog(null,"Verifique si los datos ingresados estan correctos");
             
         }
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        JOptionPane.showMessageDialog(null,"Esta es nuestro calculador de descuentos para que funcione usa un server RMI");
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -301,6 +341,7 @@ public class Descuentos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -327,6 +368,8 @@ public class Descuentos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -336,6 +379,6 @@ public class Descuentos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField numero1;
     private javax.swing.JTextField numero2;
-    private javax.swing.JTextField total;
+    private javax.swing.JLabel total;
     // End of variables declaration//GEN-END:variables
 }
