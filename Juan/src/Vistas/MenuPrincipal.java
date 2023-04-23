@@ -74,7 +74,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel11.add(jLabel4);
 
         jButton4.setBackground(new java.awt.Color(109, 118, 129));
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Gato descuento.png")); // NOI18N
+        jButton4.setText("Gato Descuentos");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel11.add(jButton4);
 
         jButton5.setBackground(new java.awt.Color(109, 118, 129));
@@ -143,6 +148,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuPrincipal menu = MenuPrincipal.getMenuPrincipal();
         menu.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Descuentos descuentos = Descuentos.getDescuentos();
+        descuentos.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

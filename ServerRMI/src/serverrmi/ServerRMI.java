@@ -39,7 +39,12 @@ public class ServerRMI extends UnicastRemoteObject implements RMIDAO{
             System.out.println(ex.getMessage());
         }
     }
-
+    
+    @Override
+    public float descuentos(float numero1, float numero2) throws RemoteException {
+        float total = (numero1*(numero2/100));
+        return numero1-total;
+    }
     @Override
     public int sumar(int numero1, int numero2) throws RemoteException {
         return numero1 + numero2;

@@ -12,6 +12,7 @@ import java.rmi.RemoteException;
  */
 public interface RMIDAO extends Remote{
     
+    public float descuentos(float numero1, float numero2)throws RemoteException;
     public int sumar(int numero1, int numero2) throws RemoteException;
     public int restar(int numero1, int numero2) throws RemoteException;
     public int multiplicar(int numero1, int numero2) throws RemoteException;

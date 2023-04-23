@@ -1,6 +1,7 @@
 package Controlador;
 
 import DAO.DAOLogin;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -16,6 +17,8 @@ public class ControladorLogin implements DAOLogin{
     private static ControladorLogin controladorLogin;
     private String usuario;
     private String contrasenia;
+    private ResourceBundle env; 
+    private String claveSecreta;
     
     
 
@@ -35,17 +38,18 @@ public class ControladorLogin implements DAOLogin{
 
     @Override
     public boolean VerificarUsuarios(String usuario, String contrasenia) {
-    /*
-    * Verificacion de usuario y contraeña    
-    */
+        
+        this.env = ResourceBundle.getBundle("juan");
+        this.claveSecreta = env.getString("claveSecreta");
+        System.out.println(env);
         boolean estado=false;
-        if((usuario.equals("juan"))&&(contrasenia.equals("12345")))
+        if((usuario.equals("juan"))&&(contrasenia.equals(claveSecreta)))
             estado=true;
         
-        else if(usuario.equals("daniel")&&(contrasenia.equals("12345")))
+        else if(usuario.equals("daniel")&&(contrasenia.equals(claveSecreta)))
             estado=true;
         
-        else if(usuario.equals("jorge")&&(contrasenia.equals("12345")))
+        else if(usuario.equals("jorge")&&(contrasenia.equals(claveSecreta)))
             estado=true;
         
         return estado;

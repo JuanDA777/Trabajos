@@ -16,12 +16,7 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
-import javax.swing.JOptionPane;
 
-/**
- *
- * @author sistemas
- */
 public class Cifrado {
     
     private ResourceBundle env; 
@@ -30,7 +25,6 @@ public class Cifrado {
     public Cifrado(){
         this.env = ResourceBundle.getBundle("juan");
         this.claveSecreta = env.getString("claveSecreta");
-        
     }
     
     private SecretKeySpec crearClave(String clave) throws UnsupportedEncodingException, NoSuchAlgorithmException{

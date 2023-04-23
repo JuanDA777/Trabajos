@@ -4,19 +4,29 @@
  */
 package Vistas;
 
+
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import Interface.RMIDAO;
+
 /**
  *
  * @author juand
  */
 public class Descuentos extends javax.swing.JFrame {
-
+    private static Descuentos descuentos;
     /**
      * Creates new form Descuentos
      */
     public Descuentos() {
         initComponents();
     }
-
+    public static Descuentos getDescuentos(){
+        if(descuentos==null){
+            descuentos=new Descuentos();
+        }
+        return descuentos;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,52 +36,232 @@ public class Descuentos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
+        numero1 = new javax.swing.JTextField();
+        jPanel17 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        numero2 = new javax.swing.JTextField();
+        jPanel20 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        jPanel21 = new javax.swing.JPanel();
+        jPanel22 = new javax.swing.JPanel();
+        total = new javax.swing.JTextField();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jPanel25 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, java.awt.BorderLayout.PAGE_START);
-
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, java.awt.BorderLayout.LINE_START);
-
-        jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, java.awt.BorderLayout.PAGE_END);
-
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, java.awt.BorderLayout.LINE_END);
-
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, java.awt.BorderLayout.CENTER);
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.setLayout(new java.awt.GridLayout(3, 4, 5, 5));
 
-        jLabel6.setText("jLabel6");
-        jPanel1.add(jLabel6, java.awt.BorderLayout.PAGE_START);
+        jPanel11.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel7.setText("jLabel7");
-        jPanel1.add(jLabel7, java.awt.BorderLayout.PAGE_END);
+        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Gato1.png")); // NOI18N
+        jPanel11.add(jLabel16);
 
-        jLabel8.setText("jLabel8");
-        jPanel1.add(jLabel8, java.awt.BorderLayout.LINE_END);
+        jPanel5.add(jPanel11);
 
-        jLabel9.setText("jLabel9");
-        jPanel1.add(jLabel9, java.awt.BorderLayout.LINE_START);
+        jLabel2.setFont(new java.awt.Font("Tilt Warp", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Precio");
+        jPanel5.add(jLabel2);
+
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.setLayout(new java.awt.GridLayout(0, 1));
+
+        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.add(jPanel16);
+
+        numero1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jPanel6.add(numero1);
+
+        jPanel17.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.add(jPanel17);
+
+        jPanel5.add(jPanel6);
+
+        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\gato2.png")); // NOI18N
+        jPanel8.add(jLabel15);
+
+        jPanel5.add(jPanel8);
+
+        jPanel12.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jPanel12);
+
+        jLabel13.setFont(new java.awt.Font("Tilt Warp", 0, 36)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Descuento en %");
+        jPanel5.add(jLabel13);
+
+        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel7.setLayout(new java.awt.GridLayout());
+
+        jPanel18.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel18.setLayout(new java.awt.GridLayout(0, 1));
+
+        jPanel19.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel18.add(jPanel19);
+
+        numero2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jPanel18.add(numero2);
+
+        jPanel20.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel18.add(jPanel20);
+
+        jPanel7.add(jPanel18);
+
+        jPanel5.add(jPanel7);
+
+        jPanel9.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jPanel9);
+
+        jPanel13.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jPanel13);
+
+        jLabel14.setFont(new java.awt.Font("Tilt Warp", 0, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Valor Pagar");
+        jPanel5.add(jLabel14);
+
+        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.setLayout(new java.awt.GridLayout());
+
+        jPanel21.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel21.setLayout(new java.awt.GridLayout(0, 1));
+
+        jPanel22.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel21.add(jPanel22);
+
+        total.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jPanel21.add(total);
+
+        jPanel23.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel21.add(jPanel23);
+
+        jPanel15.add(jPanel21);
+
+        jPanel5.add(jPanel15);
+
+        jPanel10.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jPanel10);
+
+        jPanel1.add(jPanel5, java.awt.BorderLayout.CENTER);
+
+        jPanel14.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.setLayout(new java.awt.GridLayout());
+
+        jPanel24.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.add(jPanel24);
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton1);
+
+        jButton2.setBackground(new java.awt.Color(0, 204, 204));
+        jButton2.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Calcular");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton2);
+
+        jPanel25.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.add(jPanel25);
+
+        jPanel1.add(jPanel14, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(new java.awt.GridLayout());
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jPanel4);
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\almacen.png")); // NOI18N
+        jPanel2.add(jLabel10);
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\GATO.png")); // NOI18N
+        jPanel2.add(jLabel11);
+
+        jLabel12.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\shop.png")); // NOI18N
+        jPanel2.add(jLabel12);
+
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jPanel3);
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Descuentos descuentos = Descuentos.getDescuentos();
+        descuentos.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try{
+            Registry registro=LocateRegistry.getRegistry("127.0.0.1",7777);
+            RMIDAO interfaz = (RMIDAO) registro.lookup("RemotoRMI");
+            
+            float descuento;
+            descuento = interfaz.descuentos(Float.parseFloat(numero1.getText()), Float.parseFloat(numero2.getText()));
+            total.setText(descuento+"");
+            
+        }catch(Exception e){
+            System.out.println(""+e);
+            
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,15 +299,43 @@ public class Descuentos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JTextField numero1;
+    private javax.swing.JTextField numero2;
+    private javax.swing.JTextField total;
     // End of variables declaration//GEN-END:variables
 }
