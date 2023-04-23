@@ -58,9 +58,7 @@ public class Login extends javax.swing.JFrame {
         jPanel16 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
         OlvidoContraseña = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,7 +72,10 @@ public class Login extends javax.swing.JFrame {
 
         jPanel15.setLayout(new java.awt.GridLayout(0, 1));
 
+        jPanel3.setBackground(new java.awt.Color(205, 205, 205));
         jPanel3.setLayout(new java.awt.GridLayout(1, 0));
+
+        jPanel8.setBackground(new java.awt.Color(205, 205, 205));
         jPanel3.add(jPanel8);
 
         usuario.setText("Usuario...");
@@ -84,11 +85,16 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel3.add(usuario);
+
+        jPanel7.setBackground(new java.awt.Color(205, 205, 205));
         jPanel3.add(jPanel7);
 
         jPanel15.add(jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(205, 205, 205));
         jPanel4.setLayout(new java.awt.GridLayout(1, 0));
+
+        jPanel6.setBackground(new java.awt.Color(205, 205, 205));
         jPanel4.add(jPanel6);
 
         contrasenia.setText("Contraseña...");
@@ -98,10 +104,13 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel4.add(contrasenia);
+
+        jPanel5.setBackground(new java.awt.Color(205, 205, 205));
         jPanel4.add(jPanel5);
 
         jPanel15.add(jPanel4);
 
+        jButton2.setBackground(new java.awt.Color(109, 118, 129));
         jButton2.setText("Login");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,8 +121,10 @@ public class Login extends javax.swing.JFrame {
 
         jPanel14.add(jPanel15, java.awt.BorderLayout.PAGE_END);
 
+        jPanel16.setBackground(new java.awt.Color(205, 205, 205));
         jPanel16.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel3.setBackground(new java.awt.Color(205, 205, 205));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Imagen de WhatsApp 2023-04-21 a las 09.07.53.jpg")); // NOI18N
         jPanel16.add(jLabel3);
@@ -122,9 +133,10 @@ public class Login extends javax.swing.JFrame {
 
         jPanel13.add(jPanel14, java.awt.BorderLayout.CENTER);
 
+        jPanel17.setBackground(new java.awt.Color(205, 205, 205));
         jPanel17.setLayout(new java.awt.GridLayout(1, 0));
-        jPanel17.add(jPanel9);
 
+        OlvidoContraseña.setBackground(new java.awt.Color(205, 205, 205));
         OlvidoContraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         OlvidoContraseña.setText("¿Olvidaste tu usuario o contraseña?");
         OlvidoContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -139,7 +151,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel17.add(OlvidoContraseña);
-        jPanel17.add(jPanel10);
 
         jPanel13.add(jPanel17, java.awt.BorderLayout.PAGE_END);
 
@@ -194,7 +205,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
@@ -208,7 +218,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

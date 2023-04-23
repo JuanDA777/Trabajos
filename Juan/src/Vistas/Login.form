@@ -78,6 +78,11 @@
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JPanel" name="jPanel3">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                            </Property>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
                             <Property name="columns" type="int" value="0"/>
@@ -85,6 +90,11 @@
                           </Layout>
                           <SubComponents>
                             <Container class="javax.swing.JPanel" name="jPanel8">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                                </Property>
+                              </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                             </Container>
@@ -97,12 +107,22 @@
                               </Events>
                             </Component>
                             <Container class="javax.swing.JPanel" name="jPanel7">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                                </Property>
+                              </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                             </Container>
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel4">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                            </Property>
+                          </Properties>
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
                             <Property name="columns" type="int" value="0"/>
@@ -110,6 +130,11 @@
                           </Layout>
                           <SubComponents>
                             <Container class="javax.swing.JPanel" name="jPanel6">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                                </Property>
+                              </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                             </Container>
@@ -122,6 +147,11 @@
                               </Events>
                             </Component>
                             <Container class="javax.swing.JPanel" name="jPanel5">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                                </Property>
+                              </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
                             </Container>
@@ -129,6 +159,9 @@
                         </Container>
                         <Component class="javax.swing.JButton" name="jButton2">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="81" green="76" red="6d" type="rgb"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Login"/>
                           </Properties>
                           <Events>
@@ -138,6 +171,11 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel16">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                        </Property>
+                      </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                           <BorderConstraints direction="Center"/>
@@ -151,6 +189,9 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel3">
                           <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                            </Property>
                             <Property name="horizontalAlignment" type="int" value="0"/>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="2" name="C:\Users\juand\OneDrive\Documents\TrabajosApo\Juan\Imagenes\Imagen de WhatsApp 2023-04-21 a las 09.07.53.jpg"/>
@@ -162,6 +203,11 @@
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel17">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                    </Property>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                       <BorderConstraints direction="Last"/>
@@ -173,12 +219,11 @@
                     <Property name="rows" type="int" value="1"/>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JPanel" name="jPanel9">
-
-                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-                    </Container>
                     <Component class="javax.swing.JLabel" name="OlvidoContrase&#xf1;a">
                       <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cd" green="cd" red="cd" type="rgb"/>
+                        </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="&#xbf;Olvidaste tu usuario o contrase&#xf1;a?"/>
                       </Properties>
@@ -188,10 +233,6 @@
                         <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="OlvidoContrase&#xf1;aMouseExited"/>
                       </Events>
                     </Component>
-                    <Container class="javax.swing.JPanel" name="jPanel10">
-
-                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
-                    </Container>
                   </SubComponents>
                 </Container>
               </SubComponents>
