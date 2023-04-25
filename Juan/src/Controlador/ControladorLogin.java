@@ -42,7 +42,7 @@ public class ControladorLogin implements DAOLogin{
         this.env = ResourceBundle.getBundle("juan");
         this.claveSecreta = env.getString("claveSecreta");
         System.out.println(env);
-        boolean estado=false;
+        boolean estado=false;   
         if((usuario.equals("juan"))&&(contrasenia.equals(claveSecreta)))
             estado=true;
         
@@ -53,6 +53,9 @@ public class ControladorLogin implements DAOLogin{
             estado=true;
         
         else if(usuario.equals("daferarte")&&(contrasenia.equals(claveSecreta)))
+            estado=true;
+        
+        else if(usuario.equals("noguera")&&(contrasenia.equals(claveSecreta)))
             estado=true;
         
         return estado;

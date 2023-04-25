@@ -68,17 +68,22 @@ public class Login extends javax.swing.JFrame {
 
         jPanel13.setLayout(new java.awt.BorderLayout());
 
+        jPanel14.setBackground(new java.awt.Color(0, 0, 0));
         jPanel14.setLayout(new java.awt.BorderLayout());
 
+        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
         jPanel15.setLayout(new java.awt.GridLayout(0, 1));
 
-        jPanel3.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel8.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.add(jPanel8);
 
+        usuario.setBackground(new java.awt.Color(51, 51, 51));
+        usuario.setForeground(new java.awt.Color(255, 255, 255));
         usuario.setText("Usuario...");
+        usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         usuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 usuarioMouseClicked(evt);
@@ -86,18 +91,21 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel3.add(usuario);
 
-        jPanel7.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
         jPanel3.add(jPanel7);
 
         jPanel15.add(jPanel3);
 
-        jPanel4.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel6.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.add(jPanel6);
 
+        contrasenia.setBackground(new java.awt.Color(51, 51, 51));
+        contrasenia.setForeground(new java.awt.Color(255, 255, 255));
         contrasenia.setText("Contraseña...");
+        contrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
         contrasenia.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 contraseniaMouseClicked(evt);
@@ -105,12 +113,14 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel4.add(contrasenia);
 
-        jPanel5.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.add(jPanel5);
 
         jPanel15.add(jPanel4);
 
         jButton2.setBackground(new java.awt.Color(109, 118, 129));
+        jButton2.setFont(new java.awt.Font("Tilt Warp", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Login");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,10 +131,10 @@ public class Login extends javax.swing.JFrame {
 
         jPanel14.add(jPanel15, java.awt.BorderLayout.PAGE_END);
 
-        jPanel16.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
         jPanel16.setLayout(new java.awt.GridLayout(0, 1));
 
-        jLabel3.setBackground(new java.awt.Color(205, 205, 205));
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Imagen de WhatsApp 2023-04-21 a las 09.07.53.jpg")); // NOI18N
         jPanel16.add(jLabel3);
@@ -133,10 +143,12 @@ public class Login extends javax.swing.JFrame {
 
         jPanel13.add(jPanel14, java.awt.BorderLayout.CENTER);
 
-        jPanel17.setBackground(new java.awt.Color(205, 205, 205));
+        jPanel17.setBackground(new java.awt.Color(0, 0, 0));
         jPanel17.setLayout(new java.awt.GridLayout(1, 0));
 
-        OlvidoContraseña.setBackground(new java.awt.Color(205, 205, 205));
+        OlvidoContraseña.setBackground(new java.awt.Color(0, 0, 0));
+        OlvidoContraseña.setFont(new java.awt.Font("Tilt Warp", 0, 12)); // NOI18N
+        OlvidoContraseña.setForeground(new java.awt.Color(255, 255, 255));
         OlvidoContraseña.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         OlvidoContraseña.setText("¿Olvidaste tu usuario o contraseña?");
         OlvidoContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -172,6 +184,8 @@ public class Login extends javax.swing.JFrame {
              else{
             JOptionPane.showMessageDialog(this, "Usuario incorrecto", "Información", JOptionPane.ERROR_MESSAGE);
              }
+             Login login = Login.getLogin();
+             login.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void OlvidoContraseñaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OlvidoContraseñaMouseEntered
@@ -179,20 +193,20 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_OlvidoContraseñaMouseEntered
 
     private void OlvidoContraseñaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OlvidoContraseñaMouseExited
-        OlvidoContraseña.setForeground(new java.awt.Color(0, 0, 0));
+        OlvidoContraseña.setForeground(new java.awt.Color(255, 255, 255));
     }//GEN-LAST:event_OlvidoContraseñaMouseExited
 
     private void usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseClicked
         usuario.setText("");
     }//GEN-LAST:event_usuarioMouseClicked
 
-    private void contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseniaMouseClicked
-        contrasenia.setText("");
-    }//GEN-LAST:event_contraseniaMouseClicked
-
     private void OlvidoContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OlvidoContraseñaMouseClicked
         JOptionPane.showMessageDialog(null, "El usuario es tu nombre y la contraseña es del 1 al 5");
     }//GEN-LAST:event_OlvidoContraseñaMouseClicked
+
+    private void contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseniaMouseClicked
+        contrasenia.setText("");
+    }//GEN-LAST:event_contraseniaMouseClicked
 
     /**
      * @param args the command line arguments
