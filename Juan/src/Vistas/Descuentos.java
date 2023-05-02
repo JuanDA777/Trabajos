@@ -21,6 +21,7 @@ public class Descuentos extends javax.swing.JFrame {
      */
     public Descuentos() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     public static Descuentos getDescuentos(){
         if(descuentos==null){
@@ -81,13 +82,13 @@ public class Descuentos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel5.setBackground(new java.awt.Color(0, 153, 153));
         jPanel5.setLayout(new java.awt.GridLayout(3, 4, 5, 5));
 
-        jPanel11.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel11.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Gato1.png")); // NOI18N
         jPanel11.add(jLabel16);
@@ -100,28 +101,29 @@ public class Descuentos extends javax.swing.JFrame {
         jLabel2.setText("Precio");
         jPanel5.add(jLabel2);
 
-        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
         jPanel6.setLayout(new java.awt.GridLayout(0, 1));
 
-        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel16.setBackground(new java.awt.Color(0, 153, 153));
         jPanel6.add(jPanel16);
 
         numero1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jPanel6.add(numero1);
 
-        jPanel17.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel17.setBackground(new java.awt.Color(0, 153, 153));
         jPanel6.add(jPanel17);
 
         jPanel5.add(jPanel6);
 
-        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel8.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\gato2.png")); // NOI18N
         jPanel8.add(jLabel15);
 
         jPanel5.add(jPanel8);
 
-        jPanel12.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel12.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel12.setLayout(new java.awt.GridLayout(1, 0));
         jPanel5.add(jPanel12);
 
         jLabel13.setFont(new java.awt.Font("Tilt Warp", 0, 36)); // NOI18N
@@ -130,29 +132,30 @@ public class Descuentos extends javax.swing.JFrame {
         jLabel13.setText("Descuento en %");
         jPanel5.add(jLabel13);
 
-        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel7.setBackground(new java.awt.Color(0, 153, 153));
         jPanel7.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel18.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel18.setBackground(new java.awt.Color(0, 153, 153));
         jPanel18.setLayout(new java.awt.GridLayout(0, 1));
 
-        jPanel19.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel19.setBackground(new java.awt.Color(0, 153, 153));
         jPanel18.add(jPanel19);
 
         numero2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jPanel18.add(numero2);
 
-        jPanel20.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel20.setBackground(new java.awt.Color(0, 153, 153));
         jPanel18.add(jPanel20);
 
         jPanel7.add(jPanel18);
 
         jPanel5.add(jPanel7);
 
-        jPanel9.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel9.setBackground(new java.awt.Color(0, 153, 153));
         jPanel5.add(jPanel9);
 
-        jPanel13.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel13.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel13.setLayout(new java.awt.GridLayout(1, 0));
         jPanel5.add(jPanel13);
 
         jLabel14.setFont(new java.awt.Font("Tilt Warp", 0, 36)); // NOI18N
@@ -161,38 +164,38 @@ public class Descuentos extends javax.swing.JFrame {
         jLabel14.setText("Valor Pagar $");
         jPanel5.add(jLabel14);
 
-        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel15.setBackground(new java.awt.Color(0, 153, 153));
         jPanel15.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel21.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel21.setBackground(new java.awt.Color(0, 153, 153));
         jPanel21.setLayout(new java.awt.GridLayout(0, 1));
 
-        jPanel22.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel22.setBackground(new java.awt.Color(0, 153, 153));
         jPanel21.add(jPanel22);
 
-        jPanel27.setLayout(new java.awt.GridLayout());
+        jPanel27.setLayout(new java.awt.GridLayout(1, 0));
 
         total.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jPanel27.add(total);
 
         jPanel21.add(jPanel27);
 
-        jPanel23.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel23.setBackground(new java.awt.Color(0, 153, 153));
         jPanel21.add(jPanel23);
 
         jPanel15.add(jPanel21);
 
         jPanel5.add(jPanel15);
 
-        jPanel10.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.setBackground(new java.awt.Color(0, 153, 153));
         jPanel5.add(jPanel10);
 
         jPanel1.add(jPanel5, java.awt.BorderLayout.CENTER);
 
-        jPanel14.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel14.setBackground(new java.awt.Color(0, 153, 153));
         jPanel14.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel24.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel24.setBackground(new java.awt.Color(0, 153, 153));
         jPanel14.add(jPanel24);
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
@@ -218,9 +221,9 @@ public class Descuentos extends javax.swing.JFrame {
         jPanel14.add(jButton2);
 
         jPanel25.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel25.setLayout(new java.awt.GridLayout());
+        jPanel25.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel26.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel26.setBackground(new java.awt.Color(0, 153, 153));
         jPanel25.add(jPanel26);
 
         jButton3.setBackground(new java.awt.Color(255, 0, 0));
@@ -240,10 +243,10 @@ public class Descuentos extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.add(jPanel4);
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -259,7 +262,7 @@ public class Descuentos extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\shop.png")); // NOI18N
         jPanel2.add(jLabel12);
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
         jPanel2.add(jPanel3);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);

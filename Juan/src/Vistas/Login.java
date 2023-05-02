@@ -22,6 +22,7 @@ public class Login extends javax.swing.JFrame {
     
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
         
     }
      public static Login getLogin(){
@@ -45,18 +46,19 @@ public class Login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        usuario = new javax.swing.JTextField();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        contrasenia = new javax.swing.JTextField();
-        jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        usuario = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        contrasenia = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         OlvidoContraseña = new javax.swing.JLabel();
 
@@ -71,16 +73,31 @@ public class Login extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(0, 0, 0));
         jPanel14.setLayout(new java.awt.BorderLayout());
 
-        jPanel15.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel15.setLayout(new java.awt.GridLayout(0, 1));
+        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel16.setLayout(new java.awt.GridLayout(0, 2));
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Imagen de WhatsApp 2023-04-21 a las 09.07.53.jpg")); // NOI18N
+        jPanel16.add(jLabel3);
 
-        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(jPanel8);
+        jPanel9.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel9.setLayout(new java.awt.GridLayout(0, 1));
 
-        usuario.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Inicio de sesion");
+        jPanel9.add(jLabel1);
+
+        jPanel10.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.setLayout(new java.awt.GridLayout(3, 3, 10, 15));
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.add(jPanel4);
+
+        usuario.setBackground(new java.awt.Color(153, 153, 153));
         usuario.setForeground(new java.awt.Color(255, 255, 255));
         usuario.setText("Usuario...");
         usuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
@@ -88,21 +105,24 @@ public class Login extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 usuarioMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                usuarioMouseExited(evt);
+            }
         });
-        jPanel3.add(usuario);
+        usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usuarioKeyPressed(evt);
+            }
+        });
+        jPanel10.add(usuario);
 
         jPanel7.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel3.add(jPanel7);
+        jPanel10.add(jPanel7);
 
-        jPanel15.add(jPanel3);
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.add(jPanel5);
 
-        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.setLayout(new java.awt.GridLayout(1, 0));
-
-        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.add(jPanel6);
-
-        contrasenia.setBackground(new java.awt.Color(51, 51, 51));
+        contrasenia.setBackground(new java.awt.Color(153, 153, 153));
         contrasenia.setForeground(new java.awt.Color(255, 255, 255));
         contrasenia.setText("Contraseña...");
         contrasenia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
@@ -110,13 +130,25 @@ public class Login extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 contraseniaMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                contraseniaMouseExited(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                contraseniaMouseReleased(evt);
+            }
         });
-        jPanel4.add(contrasenia);
+        contrasenia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                contraseniaKeyPressed(evt);
+            }
+        });
+        jPanel10.add(contrasenia);
 
-        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.add(jPanel5);
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.add(jPanel3);
 
-        jPanel15.add(jPanel4);
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel10.add(jPanel6);
 
         jButton2.setBackground(new java.awt.Color(109, 118, 129));
         jButton2.setFont(new java.awt.Font("Tilt Warp", 1, 14)); // NOI18N
@@ -127,17 +159,11 @@ public class Login extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel15.add(jButton2);
+        jPanel10.add(jButton2);
 
-        jPanel14.add(jPanel15, java.awt.BorderLayout.PAGE_END);
+        jPanel9.add(jPanel10);
 
-        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel16.setLayout(new java.awt.GridLayout(0, 1));
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Imagen de WhatsApp 2023-04-21 a las 09.07.53.jpg")); // NOI18N
-        jPanel16.add(jLabel3);
+        jPanel16.add(jPanel9);
 
         jPanel14.add(jPanel16, java.awt.BorderLayout.CENTER);
 
@@ -179,13 +205,17 @@ public class Login extends javax.swing.JFrame {
              if(cLogin.VerificarUsuarios(usuario.getText(), contrasenia.getText())){
                  MenuPrincipal menu = MenuPrincipal.getMenuPrincipal();
                  menu.setVisible(true);
+                 
+                 Login login=Login.getLogin();
+                 login.setVisible(false);
+                 
              }
             
              else{
             JOptionPane.showMessageDialog(this, "Usuario incorrecto", "Información", JOptionPane.ERROR_MESSAGE);
              }
-             Login login = Login.getLogin();
-             login.setVisible(false);
+             
+             
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void OlvidoContraseñaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OlvidoContraseñaMouseEntered
@@ -197,7 +227,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_OlvidoContraseñaMouseExited
 
     private void usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseClicked
-        usuario.setText("");
+        //nada
     }//GEN-LAST:event_usuarioMouseClicked
 
     private void OlvidoContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OlvidoContraseñaMouseClicked
@@ -205,8 +235,34 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_OlvidoContraseñaMouseClicked
 
     private void contraseniaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseniaMouseClicked
-        contrasenia.setText("");
+        //Nada
     }//GEN-LAST:event_contraseniaMouseClicked
+
+    private void usuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioKeyPressed
+        if(usuario.getText().equals("Usuario..."))
+        usuario.setText("");
+        
+    }//GEN-LAST:event_usuarioKeyPressed
+
+    private void contraseniaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_contraseniaKeyPressed
+        if(contrasenia.getText().equals("Contraseña..."))
+        contrasenia.setText("");
+    }//GEN-LAST:event_contraseniaKeyPressed
+
+    private void usuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseExited
+        if(usuario.getText().equals(""))
+        usuario.setText("Usuario...");
+    }//GEN-LAST:event_usuarioMouseExited
+
+    private void contraseniaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseniaMouseExited
+        if(contrasenia.getText().equals(""))
+        contrasenia.setText("Contasenia...");
+    }//GEN-LAST:event_contraseniaMouseExited
+
+    private void contraseniaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseniaMouseReleased
+        if(contrasenia.getText().equals(""))
+        contrasenia.setText("Contasenia...");
+    }//GEN-LAST:event_contraseniaMouseReleased
 
     /**
      * @param args the command line arguments
@@ -217,12 +273,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel OlvidoContraseña;
     private javax.swing.JTextField contrasenia;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
@@ -231,7 +288,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

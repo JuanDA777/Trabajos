@@ -25,6 +25,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
      */
     private MenuPrincipal() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     
     public static MenuPrincipal getMenuPrincipal(){
@@ -54,18 +55,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jPanel16 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel18 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,7 +84,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(0, 0, 0));
         jPanel6.add(jPanel8);
 
-        jButton4.setBackground(new java.awt.Color(109, 118, 129));
+        jButton4.setBackground(new java.awt.Color(255, 0, 0));
         jButton4.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Gato Descuentos");
@@ -106,7 +106,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jPanel5);
 
-        jButton5.setBackground(new java.awt.Color(109, 118, 129));
+        jButton5.setBackground(new java.awt.Color(0, 204, 204));
         jButton5.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Datos de usuario");
@@ -124,19 +124,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel15.setBackground(new java.awt.Color(0, 0, 0));
         jPanel15.setLayout(new java.awt.GridLayout(1, 0));
-
-        jPanel17.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel15.add(jPanel17);
-
-        jButton1.setBackground(new java.awt.Color(109, 118, 129));
-        jButton1.setFont(new java.awt.Font("Tilt Warp", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("jButton1");
-        jPanel15.add(jButton1);
-
-        jPanel16.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel15.add(jPanel16);
-
         jPanel11.add(jPanel15);
 
         jPanel10.add(jPanel11, java.awt.BorderLayout.CENTER);
@@ -147,13 +134,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel9.add(jPanel10, java.awt.BorderLayout.CENTER);
 
-        jPanel12.setLayout(new java.awt.GridLayout(2, 2));
-
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel12.add(jPanel2);
-
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel12.add(jPanel3);
+        jPanel12.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton6.setBackground(new java.awt.Color(109, 118, 129));
         jButton6.setFont(new java.awt.Font("Tilt Warp", 1, 18)); // NOI18N
@@ -180,17 +161,45 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel9.add(jPanel12, java.awt.BorderLayout.PAGE_END);
 
         jPanel14.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel14.setLayout(new java.awt.GridLayout(0, 1));
+        jPanel14.setLayout(new java.awt.GridLayout(0, 2, -30, 0));
 
-        jLabel3.setBackground(new java.awt.Color(205, 205, 205));
+        jLabel1.setFont(new java.awt.Font("Tilt Warp", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("Selecciona");
+        jPanel14.add(jLabel1);
+
+        jPanel18.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel18.setLayout(new java.awt.GridLayout(1, 0, -30, 0));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Tilt Warp", 1, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\cooltext434214005938610.png")); // NOI18N
-        jPanel14.add(jLabel3);
+        jLabel3.setText("un");
+        jPanel18.add(jLabel3);
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Tilt Warp", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setText("Boton");
+        jPanel18.add(jLabel6);
+
+        jPanel14.add(jPanel18);
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Dinero.png")); // NOI18N
         jPanel14.add(jLabel4);
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\juand\\OneDrive\\Documents\\TrabajosApo\\Juan\\Imagenes\\Pornhub-logo.svg (2).png")); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel14.add(jLabel5);
 
         jPanel9.add(jPanel14, java.awt.BorderLayout.PAGE_START);
 
@@ -236,15 +245,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
         datos.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        Ph ph = Ph.getPH();
+        ph.setVisible(true);
+        
+        MenuPrincipal menu = MenuPrincipal.getMenuPrincipal();
+        menu.setVisible(false);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -252,10 +271,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
